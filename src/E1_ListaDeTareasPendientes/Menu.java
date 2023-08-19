@@ -10,6 +10,9 @@ import java.awt.Component;
 import java.awt.Font;
 import java.awt.font.TextAttribute;
 import java.util.Map;
+import javax.swing.JCheckBox;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 /**
  *
@@ -85,15 +88,35 @@ public class Menu extends javax.swing.JFrame {
 
         jcb2.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
         jcb2.setContentAreaFilled(false);
+        jcb2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcb2ActionPerformed(evt);
+            }
+        });
 
         jcb3.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
         jcb3.setContentAreaFilled(false);
+        jcb3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcb3ActionPerformed(evt);
+            }
+        });
 
         jcb4.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
         jcb4.setContentAreaFilled(false);
+        jcb4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcb4ActionPerformed(evt);
+            }
+        });
 
         jcb5.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
         jcb5.setContentAreaFilled(false);
+        jcb5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcb5ActionPerformed(evt);
+            }
+        });
 
         jlborrar2.setBackground(new java.awt.Color(255, 102, 102));
         jlborrar2.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
@@ -253,22 +276,28 @@ public class Menu extends javax.swing.JFrame {
 
     private void jcb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb1ActionPerformed
         // TODO add your handling code here:
-        if (jcb1.isSelected()) {
-            Font font = jt1.getFont();
-            Map attributes = font.getAttributes();
-            attributes.put(TextAttribute.UNDERLINE, TextAttribute.UNDERLINE_ON);
-            jt1.setFont(font.deriveFont(attributes));
-            jt1.setForeground(Color.lightGray);
-            
-        } else {
-            Font font = jt1.getFont();
-            Map attributes = font.getAttributes();
-            attributes.put(TextAttribute.UNDERLINE, -1);
-            jt1.setFont(font.deriveFont(attributes));
-            jt1.setForeground(Color.BLACK);
-            
-        }
+        checkBox(jcb1, jt1);
     }//GEN-LAST:event_jcb1ActionPerformed
+
+    private void jcb2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb2ActionPerformed
+        // TODO add your handling code here:
+        checkBox(jcb2, jt2);
+    }//GEN-LAST:event_jcb2ActionPerformed
+
+    private void jcb3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb3ActionPerformed
+        // TODO add your handling code here:
+        checkBox(jcb3, jt3);
+    }//GEN-LAST:event_jcb3ActionPerformed
+
+    private void jcb4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb4ActionPerformed
+        // TODO add your handling code here:
+        checkBox(jcb4, jt4);
+    }//GEN-LAST:event_jcb4ActionPerformed
+
+    private void jcb5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb5ActionPerformed
+        // TODO add your handling code here:
+        checkBox(jcb5, jt5);
+    }//GEN-LAST:event_jcb5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -324,4 +353,26 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField jt4;
     private javax.swing.JTextField jt5;
     // End of variables declaration//GEN-END:variables
+
+    private void checkBox (JCheckBox c , JTextField l){
+        
+        if (c.isSelected()) {
+            Font font = l.getFont();
+            Map attributes = font.getAttributes();
+            attributes.put(TextAttribute.UNDERLINE, TextAttribute.UNDERLINE_ON);
+            l.setFont(font.deriveFont(attributes));
+            l.setForeground(Color.lightGray);
+            
+        } else {
+            Font font = l.getFont();
+            Map attributes = font.getAttributes();
+            attributes.put(TextAttribute.UNDERLINE, -1);
+            l.setFont(font.deriveFont(attributes));
+            l.setForeground(Color.BLACK);
+            
+        }
+    
+    
+    }
+
 }
