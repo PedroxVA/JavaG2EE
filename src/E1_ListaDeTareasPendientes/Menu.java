@@ -75,6 +75,11 @@ public class Menu extends javax.swing.JFrame {
         jlborrar1.setText("X");
         jlborrar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jlborrar1.setOpaque(true);
+        jlborrar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlborrar1MouseClicked(evt);
+            }
+        });
 
         jcb1.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
         jcb1.setContentAreaFilled(false);
@@ -298,6 +303,11 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         checkBox(jcb5, jt5);
     }//GEN-LAST:event_jcb5ActionPerformed
+
+    private void jlborrar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlborrar1MouseClicked
+        // TODO add your handling code here:
+        jt1.setText("");
+    }//GEN-LAST:event_jlborrar1MouseClicked
 
     /**
      * @param args the command line arguments
