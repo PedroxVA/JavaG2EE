@@ -130,6 +130,11 @@ public class Menu extends javax.swing.JFrame {
         jlborrar2.setText("X");
         jlborrar2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jlborrar2.setOpaque(true);
+        jlborrar2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlborrar2MouseClicked(evt);
+            }
+        });
 
         jlborrar3.setBackground(new java.awt.Color(255, 102, 102));
         jlborrar3.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
@@ -138,6 +143,11 @@ public class Menu extends javax.swing.JFrame {
         jlborrar3.setText("X");
         jlborrar3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jlborrar3.setOpaque(true);
+        jlborrar3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlborrar3MouseClicked(evt);
+            }
+        });
 
         jlborrar4.setBackground(new java.awt.Color(255, 102, 102));
         jlborrar4.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
@@ -146,13 +156,22 @@ public class Menu extends javax.swing.JFrame {
         jlborrar4.setText("X");
         jlborrar4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jlborrar4.setOpaque(true);
+        jlborrar4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlborrar4MouseClicked(evt);
+            }
+        });
 
         jlborrar5.setFont(new java.awt.Font("MS UI Gothic", 1, 18)); // NOI18N
         jlborrar5.setForeground(new java.awt.Color(51, 51, 51));
         jlborrar5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlborrar5.setText("x");
+        jlborrar5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlborrar5MouseClicked(evt);
+            }
+        });
 
-        jt1.setEditable(false);
         jt1.setText("Click para agregar una tarea!");
         jt1.setBorder(null);
         jt1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -161,26 +180,42 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jt2.setEditable(false);
         jt2.setText("Click para agregar una tarea!");
         jt2.setBorder(null);
+        jt2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt2MouseClicked(evt);
+            }
+        });
 
-        jt3.setEditable(false);
         jt3.setText("Click para agregar una tarea!");
         jt3.setBorder(null);
+        jt3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt3MouseClicked(evt);
+            }
+        });
         jt3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jt3ActionPerformed(evt);
             }
         });
 
-        jt4.setEditable(false);
         jt4.setText("Click para agregar una tarea!");
         jt4.setBorder(null);
+        jt4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt4MouseClicked(evt);
+            }
+        });
 
-        jt5.setEditable(false);
         jt5.setText("Click para agregar una tarea!");
         jt5.setBorder(null);
+        jt5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt5MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -271,8 +306,9 @@ public class Menu extends javax.swing.JFrame {
 
     private void jt1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt1MouseClicked
         // TODO add your handling code here:
-        jt1.setText("");
-        jt1.setEditable(true);
+        if (jt1.isEditable()){
+            jt1.setText("");
+        }
     }//GEN-LAST:event_jt1MouseClicked
 
     private void jt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt3ActionPerformed
@@ -308,6 +344,48 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         jt1.setText("Click para agregar una tarea!");
     }//GEN-LAST:event_jlborrar1MouseClicked
+
+    private void jlborrar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlborrar2MouseClicked
+        // TODO add your handling code here:
+        jt2.setText("Click para agregar una tarea!");
+    }//GEN-LAST:event_jlborrar2MouseClicked
+
+    private void jlborrar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlborrar3MouseClicked
+        // TODO add your handling code here:
+        jt3.setText("Click para agregar una tarea!");
+    }//GEN-LAST:event_jlborrar3MouseClicked
+
+    private void jlborrar4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlborrar4MouseClicked
+        // TODO add your handling code here:
+        jt4.setText("Click para agregar una tarea!");
+    }//GEN-LAST:event_jlborrar4MouseClicked
+
+    private void jlborrar5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlborrar5MouseClicked
+        // TODO add your handling code here:
+        jt5.setText("Click para agregar una tarea!");
+    }//GEN-LAST:event_jlborrar5MouseClicked
+
+    private void jt2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt2MouseClicked
+        // TODO add your handling code here:
+        jt2.setText("");
+
+    }//GEN-LAST:event_jt2MouseClicked
+
+    private void jt3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt3MouseClicked
+        // TODO add your handling code here:
+        jt3.setText("");
+
+    }//GEN-LAST:event_jt3MouseClicked
+
+    private void jt4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt4MouseClicked
+        // TODO add your handling code here:
+        jt4.setText("");
+    }//GEN-LAST:event_jt4MouseClicked
+
+    private void jt5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt5MouseClicked
+        // TODO add your handling code here:
+        jt5.setText("");
+    }//GEN-LAST:event_jt5MouseClicked
 
     /**
      * @param args the command line arguments
@@ -372,6 +450,7 @@ public class Menu extends javax.swing.JFrame {
             attributes.put(TextAttribute.UNDERLINE, TextAttribute.UNDERLINE_ON);
             l.setFont(font.deriveFont(attributes));
             l.setForeground(Color.lightGray);
+            l.setEditable(false);
             
         } else {
             Font font = l.getFont();
@@ -379,6 +458,7 @@ public class Menu extends javax.swing.JFrame {
             attributes.put(TextAttribute.UNDERLINE, -1);
             l.setFont(font.deriveFont(attributes));
             l.setForeground(Color.BLACK);
+            l.setEditable(true);
             
         }
     
