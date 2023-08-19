@@ -7,6 +7,8 @@ package E1_ListaDeTareasPendientes;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.font.TextAttribute;
+import java.util.Map;
 
 /**
  *
@@ -246,8 +248,14 @@ public class Menu extends javax.swing.JFrame {
 
     private void jcb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb1ActionPerformed
         // TODO add your handling code here:
-        jt1.getFont().deriveFont(Font.PLAIN);
-        jt1.setForeground(Color.DARK_GRAY);
+        Font font = jt1.getFont();
+        Map attributes = font.getAttributes();
+        attributes.put(TextAttribute.UNDERLINE, TextAttribute.UNDERLINE_ON);
+        jt1.setFont(font.deriveFont(attributes));
+//        Font subrayado = new Font("Arial", TextAttribute.UNDERLINE_ON, Font.BOLD);
+//        jt1.setFont(subrayado); es lo mismo que lo de arriba
+        jt1.setForeground(Color.lightGray);
+        System.out.println(jcb1);
     }//GEN-LAST:event_jcb1ActionPerformed
 
     /**
