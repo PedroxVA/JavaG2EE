@@ -6,6 +6,7 @@
 package E1_ListaDeTareasPendientes;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Font;
 import java.awt.font.TextAttribute;
 import java.util.Map;
@@ -16,11 +17,17 @@ import java.util.Map;
  */
 public class Menu extends javax.swing.JFrame {
 
+    @Override
+    public void setLocationRelativeTo(Component c) {
+        super.setLocationRelativeTo(c); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    }
+
     /**
      * Creates new form Menu
      */
     public Menu() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
