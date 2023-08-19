@@ -280,6 +280,11 @@ public class Menu extends javax.swing.JFrame {
         jt1.setText("Click para agregar una tarea!");
     }//GEN-LAST:event_jlborrar1MouseClicked
 
+    private void jlborrar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlborrar1MouseClicked
+        // TODO add your handling code here:
+        jt1.setText("");
+    }//GEN-LAST:event_jlborrar1MouseClicked
+
     /**
      * @param args the command line arguments
      */
